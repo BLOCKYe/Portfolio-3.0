@@ -27,6 +27,10 @@ a {
    min-width: 41px;
 }
 
+.icon g path {
+    stroke: #525252;
+}
+
 .icon:hover g path {
     stroke: #FACF87 !important;
     transition-property: all;
