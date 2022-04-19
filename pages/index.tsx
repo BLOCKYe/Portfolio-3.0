@@ -11,6 +11,7 @@ import Head from 'next/head'
 import Github from '../assets/icons/github.svg'
 import LinkedIn from '../assets/icons/linkedin.svg'
 import Mail from '../assets/icons/mail.svg'
+import ProjectCard from "../components/HomeView/ProjectCard/ProjectCard";
 
 
 const Home: NextPage = () => {
@@ -68,14 +69,37 @@ const Home: NextPage = () => {
                     <div className="flex gap-3 md:gap-5 justify-end mt-20 items-center">
 
                         <div className="w-full h-[3px] bg-[#262626] rounded-full relative">
-                            <div
-                                className={'absolute top-0 left-1/3 w-5 md:w-10 h-[3px] rounded-full bg-justWhite-light'} />
+                            <div className={'absolute top-0 left-1/3 w-5 md:w-10 h-[3px] rounded-full ' +
+                                'bg-justWhite-light'} />
                         </div>
 
                         <Mail className={'cursor-pointer transition-all icon'} />
                         <LinkedIn className={'cursor-pointer transition-all icon'} />
                         <Github className={'cursor-pointer transition-all icon'} />
                     </div>
+
+
+                    {/* <--- Previous projects ---> */}
+                    <div className="text-3xl md:text-4xl mt-20">
+                        Previous projects
+                    </div>
+
+                    <div className="mt-5 text-justWhite-dark text-lg md:text-xl">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veniam?
+                    </div>
+
+                    {/* <--- Code projects ---> */}
+                    <div className="text-xl md:text-2xl mt-10 text-extra-color">
+                        Code
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-5 mt-5">
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                    </div>
+
                 </div>
             </div>
         </div>
