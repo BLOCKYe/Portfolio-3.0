@@ -17,9 +17,9 @@ class ProjectCard extends Component {
         return (
             <div className={'bg-justDark-light rounded'}>
 
-                <Image src={CloudTank} alt={'Cloud Tank'}/>
+                <Image src={CloudTank} alt={'Cloud Tank'} />
 
-                <div className="p-10">
+                <div className="p-3 md:p-10">
                     <div className="text-lg text-extra-color">
                         Cloudtank.pl
                     </div>
@@ -30,7 +30,7 @@ class ProjectCard extends Component {
                         repellendus sed similique unde voluptas.
                     </div>
 
-                    <div className="flex gap-5 mt-5">
+                    <div className="flex gap-3 md:gap-5 mt-5 flex-wrap">
                         <div className="bg-[#373737] p-1 px-3 text-sm rounded">
                             NextJs
                         </div>
