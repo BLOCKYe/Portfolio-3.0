@@ -88,12 +88,39 @@ const Home: NextPage = () => {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veniam?
                     </div>
 
-                    {/* <--- Code projects ---> */}
+
+                    {/* <--- Code ---> */}
                     <div className="text-xl md:text-2xl mt-10 text-extra-color">
                         Code
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-5 mt-5">
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                    </div>
+
+
+                    {/* <--- Design ---> */}
+                    <div className="text-xl md:text-2xl mt-20 text-extra-color">
+                        Design
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-5 mt-5">
+                        <ProjectCard />
+                        <ProjectCard />
+                    </div>
+
+
+                    {/* <--- Sandbox ---> */}
+                    <div className="text-xl md:text-2xl mt-20 text-extra-color">
+                        Sandbox
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-5 mt-5">
+                        <ProjectCard />
+                        <ProjectCard />
                         <ProjectCard />
                         <ProjectCard />
                         <ProjectCard />
