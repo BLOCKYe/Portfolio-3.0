@@ -8,7 +8,8 @@
     "date": "December 2021",
     "category": "code",
     "id": 1,
-    "thumbnail": "images/code/cloudtank.png"
+    "thumbnail": "images/code/cloudtank.png",
+    "images": ["images/code/cloudtank.png", "images/code/cloudtank2.png"]
   },
   {
     "title": "Memenator",
@@ -19,7 +20,8 @@
     "date": "November 2021",
     "category": "code",
     "id": 2,
-    "thumbnail": "images/code/memenator.jpg"
+    "thumbnail": "images/code/memenator.jpg",
+    "images": ["images/code/memenator.jpg", "images/code/memenator2.jpg"]
   },
   {
     "title": "Casino",
@@ -90,7 +92,8 @@
     "date": "2019",
     "category": "sandbox",
     "id": 9,
-    "thumbnail": "images/sandbox/eye1.jpg"
+    "thumbnail": "images/sandbox/eye1.jpg",
+    "images": ["images/sandbox/eye1.jpg", "images/sandbox/eye2.jpg"]
   },
   {
     "title": "340",
@@ -99,7 +102,8 @@
     "date": "2019",
     "category": "sandbox",
     "id": 10,
-    "thumbnail": "images/sandbox/340.jpg"
+    "thumbnail": "images/sandbox/340.jpg",
+    "images": ["images/sandbox/340.jpg", "images/sandbox/3402.jpg"]
   },
   {
     "title": "Earth",
@@ -108,7 +112,8 @@
     "date": "2021",
     "category": "sandbox",
     "id": 11,
-    "thumbnail": "images/sandbox/earth1.jpg"
+    "thumbnail": "images/sandbox/earth1.jpg",
+    "images": ["images/sandbox/earth1.jpg", "images/sandbox/earth2.jpg"]
   },
   {
     "title": "Somewhere",
