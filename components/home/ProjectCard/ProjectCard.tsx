@@ -31,14 +31,13 @@ class ProjectCard extends Component<IProjectCard, any> {
 
     render() {
         return (
-            <div className={'bg-justDark-light transition-all border-[1px] border-justDark-light hover:border-[1px] ' +
-                'overflow-hidden group hover:border-b-extra-color'}>
+            <div className={'md:bg-justDark-light transition-all overflow-hidden group border-b-2 border-[#3D3D3D] md:border-justDark-light hover:border-b-extra-color'}>
 
                 <img src={this.props.thumbnail} alt={this.props.title}
                     className={'group-hover:scale-105 transition-all w-full'} />
 
-                <div className="p-5 md:p-10 py-10">
-                    <div className="flex items-center justify-between flex-wrap">
+                <div className="md:p-10 py-10">
+                    <div className="flex items-center gap-3 justify-between flex-wrap">
                         <div className="text-xl text-extra-color">
                             {this.props.title}
                         </div>
@@ -55,7 +54,7 @@ class ProjectCard extends Component<IProjectCard, any> {
                     <div className="flex gap-3 mt-5 text-sm justify-between flex-wrap md:flex-nowrap">
                         {this.props.githubLink && (
                             <div onClick={() => Helpers.navigate(this.props.githubLink)}
-                                className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
+                                className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
                                 <Github />
                                 Github
                             </div>
@@ -63,7 +62,7 @@ class ProjectCard extends Component<IProjectCard, any> {
 
                         {this.props.websiteLink && (
                             <div onClick={() => Helpers.navigate(this.props.websiteLink)}
-                                className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
+                                className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
                                 <Link />
                                 Website
                             </div>
