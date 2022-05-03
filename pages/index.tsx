@@ -11,7 +11,11 @@ import Head from 'next/head'
 import Github from '../assets/icons/github.svg'
 import LinkedIn from '../assets/icons/linkedin.svg'
 import Mail from '../assets/icons/mail.svg'
-import ProjectCard from "../components/HomeView/ProjectCard/ProjectCard";
+import DividerHorizontal from "../components/common/Divider/DividerHorizontal";
+import Topbar from "../components/common/Topbar/Topbar";
+import Footer from "../components/common/Footer/Footer";
+import Projects from "../components/home/PreviousProjects/Projects";
+import Helpers from "../kernel/Helpers";
 
 
 const Home: NextPage = () => {
@@ -24,26 +28,21 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+
+            {/* <--- Page content wrapper ---> */}
             <div className={'grid justify-center'}>
                 <div className="max-w-5xl w-full p-5 py-10">
 
-                    {/* <--- Navbar ---> */}
-                    <div className="flex justify-end gap-5 md:gap-10 text-justWhite-dark">
-                        <div className="text-extra-color">
-                            home
-                        </div>
-                        <div className={'transition-all hover:text-justWhite-light cursor-pointer'}>
-                            projects
-                        </div>
-                        <div className={'transition-all hover:text-justWhite-light cursor-pointer'}>
-                            contact
-                        </div>
-                    </div>
+
+                    {/* <--- Top bar navigation ---> */}
+                    <Topbar selected={'home'} />
 
 
                     {/* <--- Header ---> */}
                     <div className="text-3xl md:text-4xl mt-20">
-                        Dominik Obłoza
+                        Frontend Web Developer
+                        <br />
+                        UI Designer
                     </div>
 
                     <div className="mt-10 text-justWhite-dark text-lg md:text-xl">
@@ -65,67 +64,28 @@ const Home: NextPage = () => {
                         and a fresh approach.
                     </div>
 
+
                     {/* <--- Socials ---> */}
                     <div className="flex gap-3 md:gap-5 justify-end mt-20 items-center">
 
-                        <div className="w-full h-[3px] bg-[#262626] rounded-full relative">
-                            <div className={'absolute top-0 left-1/3 w-5 md:w-10 h-[3px] rounded-full ' +
-                                'bg-justWhite-light'} />
-                        </div>
+                        <DividerHorizontal />
 
-                        <Mail className={'cursor-pointer transition-all icon'} />
-                        <LinkedIn className={'cursor-pointer transition-all icon'} />
-                        <Github className={'cursor-pointer transition-all icon'} />
+                        <Mail onClick={() => Helpers.navigate("mailto:kontakt@dominikobloza.pl")}
+                            className={'cursor-pointer transition-all icon'} />
+                        <LinkedIn
+                            onClick={() => Helpers.navigate("https://www.linkedin.com/in/dominik-ob%C5%82oza-5aa61021b/")}
+                            className={'cursor-pointer transition-all icon'} />
+                        <Github onClick={() => Helpers.navigate("https://github.com/BLOCKYe/")}
+                            className={'cursor-pointer transition-all icon'} />
                     </div>
 
 
-                    {/* <--- Previous projects ---> */}
-                    <div className="text-3xl md:text-4xl mt-20">
-                        Previous projects
-                    </div>
-
-                    <div className="mt-5 text-justWhite-dark text-lg md:text-xl">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veniam?
-                    </div>
+                    {/* <--- Previous projects board ---> */}
+                    <Projects />
 
 
-                    {/* <--- Code ---> */}
-                    <div className="text-xl md:text-2xl mt-10 text-extra-color">
-                        Code
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-5 mt-5">
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                    </div>
-
-
-                    {/* <--- Design ---> */}
-                    <div className="text-xl md:text-2xl mt-20 text-extra-color">
-                        Design
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-5 mt-5">
-                        <ProjectCard />
-                        <ProjectCard />
-                    </div>
-
-
-                    {/* <--- Sandbox ---> */}
-                    <div className="text-xl md:text-2xl mt-20 text-extra-color">
-                        Sandbox
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-5 mt-5">
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                    </div>
+                    {/* <--- Footer ---> */}
+                    <Footer />
 
                 </div>
             </div>

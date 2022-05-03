@@ -1,0 +1,158 @@
+[
+  {
+    "title": "Cloudtank.pl",
+    "desc": "A service dedicated to boosting gaming accounts. In addition, the site has a CMS that allows you to edit all the content.",
+    "tags": ["NextJS", "ChakraUI", "Strapi", "Figma", "REST API"],
+    "githubLink": "https://cloud-tank.vercel.app/",
+    "websiteLink": "https://github.com/BLOCKYe/CloudTank",
+    "date": "December 2021",
+    "category": "code",
+    "id": 1,
+    "thumbnail": "images/code/cloudtank.png"
+  },
+  {
+    "title": "Memenator",
+    "desc": "A service that allows you to publish memes and share them with your friends.",
+    "tags": ["NextJS", "ChakraUI", "Firebase", "Figma"],
+    "githubLink": "https://github.com/BLOCKYe/Memenator-service",
+    "websiteLink": "https://memenator-prod.vercel.app/",
+    "date": "November 2021",
+    "category": "code",
+    "id": 2,
+    "thumbnail": "images/code/memenator.jpg"
+  },
+  {
+    "title": "Casino",
+    "desc": "The app works like a simulator, you can bet coins and win a fortune. I also implemented currency converter in deposit zone.",
+    "tags": ["React", "Sass", "Figma", "API"],
+    "githubLink": "https://github.com/BLOCKYe/Casino",
+    "websiteLink": "https://www.casino-simulator.online/",
+    "date": "August 2021",
+    "category": "code",
+    "id": 3,
+    "thumbnail": "images/code/roulette2.png"
+  },
+  {
+    "title": "Pocket-weather",
+    "desc": "The weather app allows you to check the weather by location or by search. The app displays hourly and daily weather for 7 days.",
+    "tags": ["React", "Sass", "Figma", "API"],
+    "githubLink": "https://github.com/BLOCKYe/Pocket-weather",
+    "websiteLink": "https://pocket-weather.online/",
+    "date": "August 2021",
+    "category": "code",
+    "id": 4,
+    "thumbnail": "images/code/weather1.png"
+  },
+
+
+  {
+    "title": "Dashboard",
+    "desc": "Bank user dashboard design.",
+    "tags": ["UI", "Adobe XD", "Neumorphism", "Dashboard"],
+    "date": "2020",
+    "category": "design",
+    "id": 5,
+    "thumbnail": "images/design/dashboard.png"
+  },
+  {
+    "title": "Stragan",
+    "desc": "Project of online store selling gaming peripherals. Work on the website in progress.",
+    "tags": ["UI", "Adobe XD", "Ecommerce"],
+    "date": "2021",
+    "category": "design",
+    "id": 6,
+    "thumbnail": "images/design/stragan1.png"
+  },
+  {
+    "title": "RadekKisiel",
+    "desc": "Portfolio design for a friend.",
+    "tags": ["UI", "Adobe XD", "Ecommerce"],
+    "websiteLink": "https://radekkisiel.pl/",
+    "date": "2020",
+    "category": "design",
+    "id": 7,
+    "thumbnail": "images/design/radek1.png"
+  },
+  {
+    "title": "Record concept",
+    "desc": "The idea behind the album cover.",
+    "tags": ["UI", "Adobe XD", "Ecommerce"],
+    "date": "2018",
+    "category": "design",
+    "id": 8,
+    "thumbnail": "images/design/untitled.png"
+  },
+
+  {
+    "title": "untitled",
+    "desc": "///",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2019",
+    "category": "sandbox",
+    "id": 9,
+    "thumbnail": "images/sandbox/eye1.jpg"
+  },
+  {
+    "title": "340",
+    "desc": "///",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2019",
+    "category": "sandbox",
+    "id": 10,
+    "thumbnail": "images/sandbox/340.jpg"
+  },
+  {
+    "title": "Earth",
+    "desc": "The result of boredom.",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2021",
+    "category": "sandbox",
+    "id": 11,
+    "thumbnail": "images/sandbox/earth1.jpg"
+  },
+  {
+    "title": "Somewhere",
+    "desc": "///",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2019",
+    "category": "sandbox",
+    "id": 12,
+    "thumbnail": "images/sandbox/somewhere.png"
+  },
+  {
+    "title": "untitled",
+    "desc": "///",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2020",
+    "category": "sandbox",
+    "id": 13,
+    "thumbnail": "images/sandbox/darkside.jpg"
+  },
+  {
+    "title": "dummy",
+    "desc": "///",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2020",
+    "category": "sandbox",
+    "id": 14,
+    "thumbnail": "images/sandbox/dummy.png"
+  },
+  {
+    "title": "golden ratio",
+    "desc": "///",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2021",
+    "category": "sandbox",
+    "id": 15,
+    "thumbnail": "images/sandbox/gold.jpg"
+  },
+  {
+    "title": "untitled",
+    "desc": "///",
+    "tags": ["Photoshop", "Concept", " photo manipulation"],
+    "date": "2018",
+    "category": "sandbox",
+    "id": 16,
+    "thumbnail": "images/sandbox/heart.jpg"
+  }
+]

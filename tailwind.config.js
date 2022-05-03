@@ -12,7 +12,7 @@ module.exports = {
                 },
                 justWhite: {
                     light: '#EAEAEA',
-                    dark: '#525252'
+                    dark: '#686868'
                 },
                 extra: {
                     color: '#FACF87'

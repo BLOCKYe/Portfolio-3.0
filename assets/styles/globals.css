@@ -8,6 +8,12 @@ body {
     background-color: #111111;
     font-family: 'JetBrains Mono', monospace;
     color: #EAEAEA;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 a {
@@ -24,7 +30,7 @@ a {
 @tailwind utilities;
 
 .icon {
-   min-width: 41px;
+    min-width: 41px;
 }
 
 .icon g path {
