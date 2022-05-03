@@ -32,43 +32,55 @@ class ProjectCard extends Component<IProjectCard, any> {
     render() {
         return (
             <div className={'bg-justDark-light transition-all border-[1px] border-justDark-light hover:border-[1px] ' +
-                    'overflow-hidden group'}>
+                'overflow-hidden group hover:border-b-extra-color'}>
 
                 <img src={this.props.thumbnail} alt={this.props.title}
-                    className={'group-hover:scale-105 transition-all'} />
+                    className={'group-hover:scale-105 transition-all w-full'} />
 
-                <div className="p-3 md:p-10">
-                    <div className="flex items-center justify-between flex-wrap mt-5 md:mt-0 ">
+                <div className="p-3 md:p-10 py-10">
+                    <div className="flex items-center justify-between flex-wrap">
                         <div className="text-xl text-extra-color">
                             {this.props.title}
                         </div>
 
-                        <div className="flex gap-1">
-                            {this.props.githubLink && (
-                                <Github onClick={() => Helpers.navigate(this.props.githubLink)}
-                                    className={'cursor-pointer transition-all icon !min-w-fit'} />
-                            )}
-
-                            {this.props.websiteLink && (
-                                <Link onClick={() => Helpers.navigate(this.props.websiteLink)}
-                                    className={'cursor-pointer transition-all icon !min-w-fit'} />
-                            )}
+                        <div className="text-sm text-justWhite-dark">
+                            {this.props.date}
                         </div>
                     </div>
 
-                    <div className="text-md text-justWhite-dark mt-3 group-hover:text-justWhite-light transition-all">
+                    <div className="text-md text-justWhite-dark mt-3">
                         {this.props.desc}
                     </div>
 
-                    <div className="flex gap-2 md:gap-3 mt-5 flex-wrap">
+                    <div className="flex gap-3 mt-5 text-sm justify-between flex-wrap md:flex-nowrap">
+                        {this.props.githubLink && (
+                            <div onClick={() => Helpers.navigate(this.props.githubLink)}
+                                className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
+                                <Github />
+                                Github
+                            </div>
+                        )}
+
+                        {this.props.websiteLink && (
+                            <div onClick={() => Helpers.navigate(this.props.websiteLink)}
+                                className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
+                                <Link />
+                                Website
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="flex gap-2 md:gap-3 mt-5 flex-wrap items-center">
+
+                        <div className={'text-sm bg-[#1F1F1F] text-extra-color p-1'}>
+                            TAGS
+                        </div>
+
                         {[].slice.call(this.props.tags).map((tag: string) =>
                             <Tag key={tag} text={tag} />
                         )}
                     </div>
 
-                    <div className="mt-5 text-sm text-justWhite-dark">
-                        {this.props.date}
-                    </div>
                 </div>
             </div>
         );

@@ -15,7 +15,7 @@ interface ITag {
 class Tag extends Component<ITag, any> {
     render() {
         return (
-            <div className={'bg-[#373737] p-1 px-3 text-sm rounded'}>
+            <div className={'text-sm rounded text-justWhite-dark'}>
                 {this.props.text}
             </div>
         );
