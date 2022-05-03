@@ -11,7 +11,7 @@ import React, {Component} from 'react';
 class Footer extends Component {
     render() {
         return (
-            <div className={'text-center text-md mt-20'}>
+            <div className={'text-center text-sm md:text-md mt-20'}>
                 © 2022 Dominik Obłoza. All Rights Reserved.
             </div>
         );

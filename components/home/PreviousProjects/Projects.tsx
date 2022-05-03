@@ -14,7 +14,7 @@ import test from '../../../pages/api/data.json'
 class Projects extends Component {
     render() {
         return (
-            <div>
+            <div className={'animation-fade-3'}>
                 {/* <--- Previous projects ---> */}
                 <div className="text-xl md:text-2xl mt-20">
                     Previous projects

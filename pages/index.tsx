@@ -39,13 +39,13 @@ const Home: NextPage = () => {
 
 
                     {/* <--- Header ---> */}
-                    <div className="text-3xl md:text-4xl mt-20">
-                        Frontend Web Developer
+                    <div className="text-3xl md:text-4xl mt-10 md:mt-20 animation-fade-1">
+                        Frontend Developer
                         <br />
                         UI Designer
                     </div>
 
-                    <div className="mt-10 text-justWhite-dark text-lg md:text-xl">
+                    <div className="mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2">
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                         I'm <span className={'text-extra-color'}>Dominik Obłoza</span> - Frontend Developer based in
                         Warsaw, Poland. I specialize in developing web services and websites using
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
 
 
                     {/* <--- Socials ---> */}
-                    <div className="flex gap-3 md:gap-5 justify-end mt-20 items-center">
+                    <div className="flex gap-3 md:gap-5 justify-end mt-20 items-center animation-fade-3">
 
                         <DividerHorizontal />
 

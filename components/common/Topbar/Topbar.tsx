@@ -15,7 +15,7 @@ interface ITopbar {
 class Topbar extends Component<ITopbar, any> {
     render() {
         return (
-            <div className="flex justify-end gap-5 md:gap-10 text-justWhite-dark">
+            <div className="animation-fade-3 flex justify-end gap-5 md:gap-10 text-justWhite-dark">
                 <div className="text-extra-color">
                     home
                 </div>

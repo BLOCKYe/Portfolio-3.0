@@ -31,8 +31,7 @@ class ProjectCard extends Component<IProjectCard, any> {
 
     render() {
         return (
-            <div
-                className={'bg-justDark-light transition-all border-[1px] border-justDark-light hover:border-[1px] ' +
+            <div className={'bg-justDark-light transition-all border-[1px] border-justDark-light hover:border-[1px] ' +
                     'overflow-hidden group'}>
 
                 <img src={this.props.thumbnail} alt={this.props.title}

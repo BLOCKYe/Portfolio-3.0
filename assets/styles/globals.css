@@ -31,6 +31,10 @@ a {
 
 .icon {
     min-width: 41px;
+    padding: 5px;
+    box-sizing: content-box;
+    background-color: #111111;
+    border-radius: 999px;
 }
 
 .icon g path {
@@ -48,3 +52,45 @@ a {
     background: #525252;
     color: #FACF87;
 }
+
+
+/* <--- ANIMATIONS ---> */
+.animation-fade-1 {
+    animation: fade .5s ease;
+}
+
+.animation-fade-2 {
+    animation: fade .7s ease;
+}
+
+.animation-fade-3 {
+    animation: fade 1s ease;
+}
+
+.animation-slide-infinite {
+    animation: slide-infinite 5s ease-out infinite;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-infinite {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(100vw);
+    }
+}
+
