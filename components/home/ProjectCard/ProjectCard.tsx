@@ -12,7 +12,7 @@ import Link from '../../../assets/icons/link.svg'
 import Tag from "../../common/Tag/Tag";
 import Helpers from "../../../kernel/Helpers";
 import {
-    Modal,
+    Modal, ModalCloseButton,
     ModalContent,
     ModalOverlay
 } from "@chakra-ui/modal";
@@ -118,17 +118,12 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                 <Modal isOpen={this.state.isModalOpen} onClose={this.closeModal}>
                     <ModalOverlay />
                     <ModalContent
-                        className={'!bg-justDark-light !text-justWhite-light !w-full !max-w-6xl'}>
+                        className={'!bg-justDark-black !text-justWhite-light !w-full !max-w-6xl'}>
 
                         <div className="p-3 md:px-10">
-                            <div className="flex justify-end">
-                                <div className="text-right px-5 py-1 bg-justDark-black text-justWhite-dark rounded
-                             cursor-pointer transition-all hover:text-justWhite-light" onClick={this.closeModal}>
-                                    CLOSE
-                                </div>
-                            </div>
+                            <ModalCloseButton />
 
-                            <div className="flex items-center gap-3 justify-between flex-wrap mt-5">
+                            <div className="flex items-center gap-3 flex-wrap mt-5">
                                 <div className="text-xl text-extra-color">
                                     {this.props.title}
                                 </div>
@@ -156,6 +151,13 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                             <img src={this.props.thumbnail} alt={this.props.title}
                                 className={'transition-all w-full mt-5'} />
                         )}
+
+                        <div className="flex justify-center my-5">
+                            <div className="text-right px-5 py-1 bg-justDark-light text-justWhite-dark rounded
+                             cursor-pointer transition-all hover:text-justWhite-light" onClick={this.closeModal}>
+                                CLOSE
+                            </div>
+                        </div>
 
                     </ModalContent>
                 </Modal>
