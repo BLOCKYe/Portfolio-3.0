@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import ProjectCard, {IProjectCard} from "../ProjectCard/ProjectCard";
 
-import test from '../../../pages/api/data.json'
+import projectsData from '../../../pages/api/data.json'
 
 class Projects extends Component {
     render() {
@@ -28,12 +28,12 @@ class Projects extends Component {
                 {/* <--- Projects container wrapper ---> */}
                 <div className="grid md:grid-cols-2 gap-5 mt-5">
                     <div className={'grid gap-5'}>
-                        {[].slice.call(test).slice(0, test.length / 2).map((project: IProjectCard) =>
+                        {[].slice.call(projectsData).slice(0, projectsData.length / 2).map((project: IProjectCard) =>
                             <ProjectCard key={project.id} {...project} />
                         )}
                     </div>
                     <div className={'grid gap-5'}>
-                        {[].slice.call(test).slice(test.length / 2, test.length).map((project: IProjectCard) =>
+                        {[].slice.call(projectsData).slice(projectsData.length / 2, projectsData.length).map((project: IProjectCard) =>
                             <ProjectCard key={project.id} {...project} />
                         )}
                     </div>

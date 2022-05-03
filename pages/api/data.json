@@ -9,7 +9,8 @@
     "category": "code",
     "id": 1,
     "thumbnail": "images/code/cloudtank.png",
-    "images": ["images/code/cloudtank.png", "images/code/cloudtank2.png"]
+    "images": ["/images/code/cloudtank.png", "/images/code/cloudtank2.png"],
+    "link": "/projects/cloudtank"
   },
   {
     "title": "Memenator",

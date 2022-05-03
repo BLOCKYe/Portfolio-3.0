@@ -8,7 +8,8 @@
 
 import React, {Component} from 'react';
 import Github from '../../../assets/icons/github-small.svg'
-import Link from '../../../assets/icons/link.svg'
+import WebsiteLink from '../../../assets/icons/link.svg'
+import NextIcon from '../../../assets/icons/nexticon.svg'
 import Tag from "../../common/Tag/Tag";
 import Helpers from "../../../kernel/Helpers";
 import {
@@ -16,6 +17,8 @@ import {
     ModalContent,
     ModalOverlay
 } from "@chakra-ui/modal";
+import Link from 'next/link'
+import Back from "../../../assets/icons/backicon.svg";
 
 export interface IProjectCard {
     title: string,
@@ -94,7 +97,7 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                             {this.props.websiteLink && (
                                 <div onClick={() => Helpers.navigate(this.props.websiteLink)}
                                     className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
-                                    <Link />
+                                    <WebsiteLink />
                                     Website
                                 </div>
                             )}
@@ -110,6 +113,16 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                                 <Tag key={tag} text={tag} />
                             )}
                         </div>
+
+                        {this.props.link && (
+                            <Link href={this.props.link} passHref>
+                                <div className={'flex items-center gap-3 mt-5 cursor-pointer text-justWhite-dark ' +
+                                    'text-sm hover:text-justWhite-light transition-all group justify-end'}>
+                                    More about project
+                                    <NextIcon className={'flex transition-all group-hover:translate-x-1.5'}/>
+                                </div>
+                            </Link>
+                        )}
                     </div>
                 </div>
 
