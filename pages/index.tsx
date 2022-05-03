@@ -54,12 +54,12 @@ const Home: NextPage = () => {
                         <span className={'text-justWhite-light'}> UI</span> and take care of good
                         <span className={'text-justWhite-light'}> UX</span>.
                         I am also familiar with frameworks such as
-                        React Redux, TailwindCSS, Chakra UI, Material UI, Sass. On a daily basis I use git, Gitlab /
+                        React Redux, TailwindCSS, Chakra UI, Material UI and Sass. On a daily basis I use git, Gitlab /
                         Github, Figma, Adobe products and web services like Jira / Asana.
 
                         <br /><br />
 
-                        What <span className={'text-justWhite-light'}>sets me apart</span> is my ambition, creativity,
+                        What <span className={'text-justWhite-light'}>sets me apart</span> is my ambition, creativity
                         and accuracy. I like solving problems and looking for new solutions. I demonstrate commitment
                         and a fresh approach.
                     </div>
