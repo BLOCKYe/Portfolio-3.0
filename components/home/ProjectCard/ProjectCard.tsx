@@ -37,7 +37,7 @@ class ProjectCard extends Component<IProjectCard, any> {
                 <img src={this.props.thumbnail} alt={this.props.title}
                     className={'group-hover:scale-105 transition-all w-full'} />
 
-                <div className="p-3 md:p-10 py-10">
+                <div className="p-5 md:p-10 py-10">
                     <div className="flex items-center justify-between flex-wrap">
                         <div className="text-xl text-extra-color">
                             {this.props.title}
@@ -48,7 +48,7 @@ class ProjectCard extends Component<IProjectCard, any> {
                         </div>
                     </div>
 
-                    <div className="text-md text-justWhite-dark mt-3">
+                    <div className="text-sm md:text-md text-justWhite-dark mt-3">
                         {this.props.desc}
                     </div>
 
