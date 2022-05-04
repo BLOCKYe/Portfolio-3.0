@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                         UI Designer
                     </div>
 
-                    <div className="mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2">
+                    <div className="mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2 text-justify md:text-left">
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                         I'm <span className={'text-extra-color'}>Dominik Obłoza</span> - Frontend Developer based in
                         Warsaw, Poland. I specialize in developing web services and websites using
