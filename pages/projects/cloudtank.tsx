@@ -40,9 +40,9 @@ const CloudTank: NextPage = () => {
                     <Topbar selected={'projects'} />
 
                     <Link href={'/'} passHref>
-                        <div className={'flex items-center gap-3 mt-10 md:mt-20 cursor-pointer text-justWhite-dark ' +
-                            'text-sm hover:text-justWhite-light transition-all group'}>
-                            <Back className={'flex transition-all group-hover:-translate-x-1.5'}/>
+                        <div
+                            className={'flex items-center gap-3 mt-10 md:mt-20 cursor-pointer text-justWhite-dark text-sm hover:text-justWhite-light transition-all group animation-fade-2'}>
+                            <Back className={'flex transition-all group-hover:-translate-x-1.5'} />
                             <div>
                                 Back to home page
                             </div>
@@ -51,7 +51,7 @@ const CloudTank: NextPage = () => {
 
                     {/* <--- Header ---> */}
                     <div
-                        className="flex gap-2 sm:gap-5 mt-5 flex-wrap items-center  animation-fade-1 text-justWhite-dark">
+                        className="flex gap-2 sm:gap-5 mt-5 flex-wrap items-center animation-fade-1 text-justWhite-dark">
                         projects /
                         <div className="text-3xl md:text-4xl text-justWhite-light">
                             {projectsData[0].title}
@@ -62,7 +62,7 @@ const CloudTank: NextPage = () => {
                         {projectsData[0].desc}
                     </div>
 
-                    <div className="flex gap-3 mt-5 text-sm justify-start flex-wrap md:flex-nowrap">
+                    <div className="flex gap-3 mt-5 text-sm justify-start flex-wrap md:flex-nowrap animation-fade-3">
                         {projectsData[0].githubLink && (
                             <div onClick={() => Helpers.navigate(projectsData[0].githubLink)}
                                 className={'flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
@@ -80,7 +80,7 @@ const CloudTank: NextPage = () => {
                         )}
                     </div>
 
-                    <div className="flex gap-2 md:gap-3 mt-5 flex-wrap items-center">
+                    <div className="flex gap-2 md:gap-3 mt-5 flex-wrap items-center animation-fade-3">
 
                         <div className={'text-sm bg-[#1F1F1F] text-extra-color p-1'}>
                             TAGS
@@ -92,20 +92,22 @@ const CloudTank: NextPage = () => {
                     </div>
 
 
-                    {/* <--- Gallery ---> */}
-                    {projectsData[0].images && (
-                        <>
-                            {[].slice.call(projectsData[0].images).map((image: string) =>
-                                <img src={image} alt={projectsData[0].title} key={image}
-                                    className={'transition-all w-full mt-5'} />
-                            )}
-                        </>
-                    )}
+                    <div className={'animation-fade-2'}>
+                        {/* <--- Gallery ---> */}
+                        {projectsData[0].images && (
+                            <>
+                                {[].slice.call(projectsData[0].images).map((image: string) =>
+                                    <img src={image} alt={projectsData[0].title} key={image}
+                                        className={'transition-all w-full mt-5'} />
+                                )}
+                            </>
+                        )}
 
-                    {!projectsData[0].images && (
-                        <img src={projectsData[0].thumbnail} alt={projectsData[0].title}
-                            className={'transition-all w-full mt-5'} />
-                    )}
+                        {!projectsData[0].images && (
+                            <img src={projectsData[0].thumbnail} alt={projectsData[0].title}
+                                className={'transition-all w-full mt-5'} />
+                        )}
+                    </div>
 
 
                     {/* <--- Footer ---> */}

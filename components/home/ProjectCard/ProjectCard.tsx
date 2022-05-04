@@ -85,10 +85,10 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                             {this.props.desc}
                         </div>
 
-                        <div className="flex gap-3 mt-5 text-sm justify-between flex-wrap md:flex-nowrap">
+                        <div className="flex gap-3 mt-5 text-sm justify-between">
                             {this.props.githubLink && (
                                 <div onClick={() => Helpers.navigate(this.props.githubLink)}
-                                    className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
+                                    className={'w-full justify-center flex items-center gap-2 md:gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
                                     <Github />
                                     Github
                                 </div>
@@ -96,7 +96,7 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
 
                             {this.props.websiteLink && (
                                 <div onClick={() => Helpers.navigate(this.props.websiteLink)}
-                                    className={'w-full justify-center flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
+                                    className={'w-full justify-center flex items-center gap-2 md:gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
                                     <WebsiteLink />
                                     Website
                                 </div>
@@ -117,9 +117,9 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                         {this.props.link && (
                             <Link href={this.props.link} passHref>
                                 <div className={'flex items-center gap-3 mt-5 cursor-pointer text-justWhite-dark ' +
-                                    'text-sm hover:text-justWhite-light transition-all group justify-end'}>
+                                    'text-sm hover:text-justWhite-light transition-all group justify-end px-3'}>
                                     More about project
-                                    <NextIcon className={'flex transition-all group-hover:translate-x-1.5'}/>
+                                    <NextIcon className={'flex transition-all group-hover:translate-x-1.5'} />
                                 </div>
                             </Link>
                         )}
@@ -130,8 +130,7 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                 {/* <--- Modal with gallery preview ---> */}
                 <Modal isOpen={this.state.isModalOpen} onClose={this.closeModal}>
                     <ModalOverlay />
-                    <ModalContent
-                        className={'!bg-justDark-black !text-justWhite-light !w-full !max-w-6xl'}>
+                    <ModalContent className={'!bg-justDark-black !text-justWhite-light !w-full !max-w-6xl'}>
 
                         <div className="p-3 md:px-10">
                             <ModalCloseButton />
@@ -164,14 +163,6 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                             <img src={this.props.thumbnail} alt={this.props.title}
                                 className={'transition-all w-full mt-5'} />
                         )}
-
-                        <div className="flex justify-center my-5">
-                            <div className="text-right px-5 py-1 bg-justDark-light text-justWhite-dark rounded
-                             cursor-pointer transition-all hover:text-justWhite-light" onClick={this.closeModal}>
-                                CLOSE
-                            </div>
-                        </div>
-
                     </ModalContent>
                 </Modal>
             </>
