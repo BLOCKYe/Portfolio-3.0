@@ -31,11 +31,13 @@ class Topbar extends Component<ITopbar, any> {
                             'transition-all hover:text-justWhite-light cursor-pointer'}>
                         projects
                     </div>
-                    <div
-                        className={this.props.selected === 'contact' ? 'text-extra-color' :
-                            'transition-all hover:text-justWhite-light cursor-pointer'}>
-                        contact
-                    </div>
+                    <Link href={'/contact'} passHref>
+                        <div
+                            className={this.props.selected === 'contact' ? 'text-extra-color' :
+                                'transition-all hover:text-justWhite-light cursor-pointer'}>
+                            contact
+                        </div>
+                    </Link>
                 </div>
             </div>
         );
