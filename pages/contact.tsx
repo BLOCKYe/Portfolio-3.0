@@ -17,24 +17,33 @@ import {Input} from "@chakra-ui/input";
 import {Button, Textarea} from "@chakra-ui/react";
 import DividerHorizontal from "../components/common/Divider/DividerHorizontal";
 import {IFormData} from "../interfaces/types";
+import Repository from "../kernel/Repository";
 
 interface IStateContact {
     fullName: string,
     email: string,
     topic: string,
-    message: string
+    message: string,
+    isProcessing: boolean,
+    isSend: boolean
 }
 
 export default class Contact extends React.Component<NextPage, IStateContact> {
 
+    private readonly repository: Repository;
+
     constructor(props: any) {
         super(props);
+
+        this.repository = new Repository();
 
         this.state = {
             fullName: '',
             email: '',
             topic: '',
-            message: ''
+            message: '',
+            isProcessing: false,
+            isSend: false
         }
 
         // Bind all handlers
@@ -78,6 +87,7 @@ export default class Contact extends React.Component<NextPage, IStateContact> {
         if (this.state.email.length < 2) return true;
         if (this.state.topic.length < 2) return true;
         if (this.state.message.length < 5) return true;
+        if (this.state.isProcessing) return true
 
         return false;
     }
@@ -90,8 +100,10 @@ export default class Contact extends React.Component<NextPage, IStateContact> {
      * @private
      */
 
-    private submitForm(e: React.SyntheticEvent) {
+    public async submitForm(e: React.SyntheticEvent) {
         e.preventDefault()
+
+        if (this.formValidation()) return;
 
         const data: IFormData = {
             fullName: this.state.fullName,
@@ -101,9 +113,17 @@ export default class Contact extends React.Component<NextPage, IStateContact> {
         }
 
         // send mail
-        console.log('Sent!', data)
+        this.setState({isProcessing: true});
+        try {
+            const response = await this.repository.sendEmail(data);
+            this.setState({isProcessing: false, isSend: true});
+            this.clearForm()
 
-        this.clearForm()
+        } catch (e: any) {
+            this.setState({isProcessing: false});
+            alert('Something went wrong')
+        }
+
     }
 
 
@@ -136,8 +156,7 @@ export default class Contact extends React.Component<NextPage, IStateContact> {
 
                 {/* <--- Page content wrapper ---> */}
                 <div className={'grid justify-center'}>
-                    <div className="max-w-5xl w-full p-5 py-10">
-
+                    <div className="max-w-5xl w-full p-5 py-10 flex flex-col min-h-screen">
 
                         {/* <--- Top bar navigation ---> */}
                         <Topbar selected={'contact'} />
@@ -167,55 +186,76 @@ export default class Contact extends React.Component<NextPage, IStateContact> {
                         </div>
 
                         {/* <--- Form ---> */}
-                        <form className="mt-20 animation-fade-3">
-                            <div className="grid gap-3">
-                                <div className="text-sm">
-                                    What is your full name?
+                        {!this.state.isSend && (
+                            <form className="mt-20 animation-fade-3">
+                                <div className="grid gap-3">
+                                    <div className="text-sm">
+                                        What is your full name?
+                                    </div>
+                                    <Input variant={'filled'} type={'text'} placeholder={'Your name...'}
+                                        value={this.state.fullName} onChange={this.handleFullName} disabled={this.state.isProcessing}
+                                        className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
                                 </div>
-                                <Input variant={'filled'} type={'text'} placeholder={'Your name...'}
-                                    value={this.state.fullName} onChange={this.handleFullName}
-                                    className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
-                            </div>
 
-                            <div className="grid gap-3 mt-10">
-                                <div className="text-sm">
-                                    What is your email address?
+                                <div className="grid gap-3 mt-10">
+                                    <div className="text-sm">
+                                        What is your email address?
+                                    </div>
+                                    <Input variant={'filled'} type={'email'} placeholder={'Your email...'}
+                                        value={this.state.email} onChange={this.handleEmail} disabled={this.state.isProcessing}
+                                        className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
                                 </div>
-                                <Input variant={'filled'} type={'email'} placeholder={'Your email...'}
-                                    value={this.state.email} onChange={this.handleEmail}
-                                    className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
-                            </div>
 
-                            <div className="grid gap-3 mt-10">
-                                <div className="text-sm">
-                                    Please state the subject of your message
+                                <div className="grid gap-3 mt-10">
+                                    <div className="text-sm">
+                                        Please state the subject of your message
+                                    </div>
+                                    <Input variant={'filled'} type={'text'} placeholder={'Topic...'}
+                                        value={this.state.topic} onChange={this.handleTopic} disabled={this.state.isProcessing}
+                                        className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
                                 </div>
-                                <Input variant={'filled'} type={'text'} placeholder={'Topic...'}
-                                    value={this.state.topic} onChange={this.handleTopic}
-                                    className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
-                            </div>
 
-                            <div className="grid gap-3 mt-10">
-                                <div className="text-sm">
-                                    Enter the content of your message
+                                <div className="grid gap-3 mt-10">
+                                    <div className="text-sm">
+                                        Enter the content of your message
+                                    </div>
+                                    <Textarea variant={'filled'} placeholder={'Your message...'} rows={8}
+                                        value={this.state.message} onChange={this.handleMessage} disabled={this.state.isProcessing}
+                                        className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
                                 </div>
-                                <Textarea variant={'filled'} placeholder={'Your message...'} rows={8}
-                                    value={this.state.message} onChange={this.handleMessage}
-                                    className={'focus:!border-extra-color !bg-justDark-light !border-[1px] !text-sm'} />
-                            </div>
 
-                            <div className="mt-10 flex gap-3 md:gap-5 justify-end items-center">
-                                <DividerHorizontal />
-                                <Button variant={'unstyled'} type={'submit'} disabled={this.formValidation()}
-                                    onClick={this.submitForm}
-                                    className={'!rounded !bg-justDark-light !py-2 !px-5 !transition-all !cursor-pointer hover:!text-extra-color'}>
-                                    Send
-                                </Button>
+                                <div className="mt-10 flex gap-3 md:gap-5 justify-end items-center">
+                                    <div className={'w-full'}>
+                                        <DividerHorizontal />
+                                    </div>
+                                    <Button variant={'unstyled'} type={'submit'} disabled={this.formValidation()}
+                                        onClick={this.submitForm} isLoading={this.state.isProcessing}
+                                        loadingText={'Sending'}
+                                        className={'!rounded !bg-justDark-light !py-2 !px-5 !transition-all ' +
+                                            '!cursor-pointer hover:!text-extra-color !flex !gap-3 !box-border' +
+                                            ' !w-full md:!w-auto disabled:!cursor-not-allowed'}>
+                                        Send
+                                    </Button>
+                                </div>
+                            </form>
+                        )}
+
+                        {this.state.isSend && (
+                            <div className={'mt-20 animation-fade-3 tex grid gap-3 place-items-center text-center'}>
+                                <div className="text-2xl text-extra-color">
+                                    Your message has been sent!
+                                </div>
+
+                                <div className="text-sm text-center text-justWhite-dark">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, quo.
+                                </div>
                             </div>
-                        </form>
+                        )}
 
                         {/* <--- Footer ---> */}
-                        <Footer />
+                        <div className={'mt-auto'}>
+                            <Footer />
+                        </div>
 
                     </div>
                 </div>
