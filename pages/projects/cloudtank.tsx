@@ -11,7 +11,7 @@ import Head from 'next/head'
 import Topbar from "../../components/common/Topbar/Topbar";
 import Footer from "../../components/common/Footer/Footer";
 import projectsData from '../../pages/api/data.json'
-import Helpers from "../../kernel/Helpers";
+import Helpers from "../../utils/Helpers";
 import Github from "../../assets/icons/github-small.svg";
 import WebsiteLink from "../../assets/icons/link.svg";
 import React from "react";
@@ -54,25 +54,25 @@ const CloudTank: NextPage = () => {
                         className="flex gap-2 sm:gap-5 mt-5 flex-wrap items-center animation-fade-1 text-justWhite-dark">
                         projects /
                         <div className="text-3xl md:text-4xl text-justWhite-light">
-                            {projectsData[0].title}
+                            {projectsData[1].title}
                         </div>
                     </div>
 
                     <div className="mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2 text-justify md:text-left">
-                        {projectsData[0].desc}
+                        {projectsData[1].desc}
                     </div>
 
                     <div className="flex gap-3 mt-5 text-sm justify-start flex-wrap md:flex-nowrap animation-fade-3">
-                        {projectsData[0].githubLink && (
-                            <div onClick={() => Helpers.navigate(projectsData[0].githubLink)}
+                        {projectsData[1].githubLink && (
+                            <div onClick={() => Helpers.navigate(projectsData[1].githubLink)}
                                 className={'flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
                                 <Github />
                                 Github
                             </div>
                         )}
 
-                        {projectsData[0].websiteLink && (
-                            <div onClick={() => Helpers.navigate(projectsData[0].websiteLink)}
+                        {projectsData[1].websiteLink && (
+                            <div onClick={() => Helpers.navigate(projectsData[1].websiteLink)}
                                 className={'flex items-center gap-5 rounded bg-justDark-light md:bg-justDark-black py-2 px-5 transition-all cursor-pointer hover:text-extra-color'}>
                                 <WebsiteLink />
                                 Website
@@ -86,7 +86,7 @@ const CloudTank: NextPage = () => {
                             TAGS
                         </div>
 
-                        {[].slice.call(projectsData[0].tags).map((tag: string) =>
+                        {[].slice.call(projectsData[1].tags).map((tag: string) =>
                             <Tag key={tag} text={tag} />
                         )}
                     </div>
@@ -94,17 +94,17 @@ const CloudTank: NextPage = () => {
 
                     <div className={'animation-fade-2'}>
                         {/* <--- Gallery ---> */}
-                        {projectsData[0].images && (
+                        {projectsData[1].images && (
                             <>
-                                {[].slice.call(projectsData[0].images).map((image: string) =>
-                                    <img src={image} alt={projectsData[0].title} key={image}
+                                {[].slice.call(projectsData[1].images).map((image: string) =>
+                                    <img src={image} alt={projectsData[1].title} key={image}
                                         className={'transition-all w-full mt-5'} />
                                 )}
                             </>
                         )}
 
                         {!projectsData[0].images && (
-                            <img src={projectsData[0].thumbnail} alt={projectsData[0].title}
+                            <img src={projectsData[1].thumbnail} alt={projectsData[1].title}
                                 className={'transition-all w-full mt-5'} />
                         )}
                     </div>

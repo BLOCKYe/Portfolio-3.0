@@ -11,7 +11,7 @@ import Github from '../../../assets/icons/github-small.svg'
 import WebsiteLink from '../../../assets/icons/link.svg'
 import NextIcon from '../../../assets/icons/nexticon.svg'
 import Tag from "../../common/Tag/Tag";
-import Helpers from "../../../kernel/Helpers";
+import Helpers from "../../../utils/Helpers";
 import {
     Modal, ModalCloseButton,
     ModalContent,

@@ -15,7 +15,7 @@ import DividerHorizontal from "../components/common/Divider/DividerHorizontal";
 import Topbar from "../components/common/Topbar/Topbar";
 import Footer from "../components/common/Footer/Footer";
 import Projects from "../components/home/PreviousProjects/Projects";
-import Helpers from "../kernel/Helpers";
+import Helpers from "../utils/Helpers";
 
 
 const Home: NextPage = () => {
@@ -24,8 +24,8 @@ const Home: NextPage = () => {
             <Head>
                 <title>Portfolio - Dominik Obłoza</title>
                 <meta name="description"
-                    content="Dominik Obłoza - Frontend developer, UI Designer, Digital Creator and Inspirer" />
-                <link rel="icon" href="/favicon.ico" />
+                    content="Dominik Obłoza - Frontend developer, UI Designer, Digital Creator and Inspirer"/>
+                <link rel="icon" href="/favicon.ico"/>
             </Head>
 
 
@@ -35,17 +35,18 @@ const Home: NextPage = () => {
 
 
                     {/* <--- Top bar navigation ---> */}
-                    <Topbar selected={'home'} />
+                    <Topbar selected={'home'}/>
 
 
                     {/* <--- Header ---> */}
                     <div className="text-3xl md:text-4xl mt-10 md:mt-20 animation-fade-1">
                         Frontend Developer
-                        <br />
+                        <br/>
                         UI Designer
                     </div>
 
-                    <div className="mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2 text-justify md:text-left">
+                    <div
+                        className="mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2 text-justify md:text-left">
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                         I'm <span className={'text-extra-color'}>Dominik Obłoza</span> - Frontend Developer based in
                         Warsaw, Poland. I specialize in developing web services and websites using
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
                         React Redux, TailwindCSS, Chakra UI, Material UI and Sass. On a daily basis I use git, Gitlab /
                         Github, Figma, Adobe products and web services like Jira / Asana.
 
-                        <br /><br />
+                        <br/><br/>
 
                         What <span className={'text-justWhite-light'}>sets me apart</span> is my ambition, creativity
                         and accuracy. I like solving problems and looking for new solutions. I demonstrate commitment
@@ -68,24 +69,24 @@ const Home: NextPage = () => {
                     {/* <--- Socials ---> */}
                     <div className="flex gap-3 md:gap-5 justify-end mt-20 items-center animation-fade-3">
 
-                        <DividerHorizontal />
+                        <DividerHorizontal/>
 
                         <Mail onClick={() => Helpers.navigate("mailto:kontakt@dominikobloza.pl")}
-                            className={'cursor-pointer transition-all icon'} />
+                            className={'cursor-pointer transition-all icon'}/>
                         <LinkedIn
                             onClick={() => Helpers.navigate("https://www.linkedin.com/in/dominik-ob%C5%82oza-5aa61021b/")}
-                            className={'cursor-pointer transition-all icon'} />
+                            className={'cursor-pointer transition-all icon'}/>
                         <Github onClick={() => Helpers.navigate("https://github.com/BLOCKYe/")}
-                            className={'cursor-pointer transition-all icon'} />
+                            className={'cursor-pointer transition-all icon'}/>
                     </div>
 
 
                     {/* <--- Previous projects board ---> */}
-                    <Projects />
+                    <Projects/>
 
 
                     {/* <--- Footer ---> */}
-                    <Footer />
+                    <Footer/>
 
                 </div>
             </div>

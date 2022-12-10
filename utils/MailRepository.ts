@@ -9,7 +9,7 @@
 import {IFormData} from "../interfaces/types";
 import axios from "axios";
 
-export default class Repository {
+export default class MailRepository {
 
     /**
      * This method is used to

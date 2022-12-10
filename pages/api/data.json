@@ -1,5 +1,16 @@
 [
   {
+    "title": "Outlays Dam",
+    "desc": "An application used to manage your expenses.",
+    "tags": ["NextJS", "Typescript", "Prisma", "Redux", "ChakraUI", "TailwindCSS"],
+    "githubLink": "https://github.com/BLOCKYe/Outlays-dam",
+    "date": "September 2022",
+    "category": "code",
+    "id": 18,
+    "thumbnail": "/images/code/outlays-dam-1.jpg",
+    "images": ["/images/code/outlays-dam-1.jpg", "/images/code/outlays-dam-2.jpg", "/images/code/outlays-dam-3.jpg"]
+  },
+  {
     "title": "Cloudtank.pl",
     "desc": "A service dedicated to boosting gaming accounts. In addition, the site has a CMS that allows you to edit all the content.",
     "tags": ["NextJS", "ChakraUI", "Strapi", "Figma", "REST API"],
@@ -8,20 +19,31 @@
     "date": "December 2021",
     "category": "code",
     "id": 1,
-    "thumbnail": "images/code/cloudtank.png",
+    "thumbnail": "/images/code/cloudtank.png",
     "images": ["/images/code/cloudtank.png", "/images/code/cloudtank2.png"],
     "link": "/projects/cloudtank"
+  },
+  {
+    "title": "Pocket poll",
+    "desc": "A pocket application that allows you to create anonymous surveys.",
+    "tags": ["React", "Typescript", "Firebase", "Websocket"],
+    "githubLink": "https://github.com/BLOCKYe/pocket-poll",
+    "websiteLink": "https://pocket-poll.vercel.app/",
+    "date": "May 2022",
+    "category": "code",
+    "id": 17,
+    "thumbnail": "/images/code/pocket-poll-2.jpg",
+    "images": ["/images/code/pocket-poll-1.jpg", "/images/code/pocket-poll-2.jpg", "/images/code/pocket-poll-3.jpg"]
   },
   {
     "title": "Memenator",
     "desc": "A service that allows you to publish memes and share them with your friends.",
     "tags": ["NextJS", "ChakraUI", "Firebase", "Figma"],
     "githubLink": "https://github.com/BLOCKYe/Memenator-service",
-    "websiteLink": "https://memenator-prod.vercel.app/",
     "date": "November 2021",
     "category": "code",
     "id": 2,
-    "thumbnail": "images/code/memenator.jpg",
+    "thumbnail": "/images/code/memenator.jpg",
     "images": ["images/code/memenator.jpg", "images/code/Memenator2.jpg"]
   },
   {
@@ -29,34 +51,22 @@
     "desc": "The app works like a simulator, you can bet coins and win a fortune. I also implemented currency converter in deposit zone.",
     "tags": ["React", "Sass", "Figma", "API"],
     "githubLink": "https://github.com/BLOCKYe/Casino",
-    "websiteLink": "https://www.casino-simulator.online/",
     "date": "August 2021",
     "category": "code",
     "id": 3,
-    "thumbnail": "images/code/roulette2.png"
+    "thumbnail": "/images/code/roulette2.png"
   },
   {
     "title": "Pocket-weather",
     "desc": "The weather app allows you to check the weather by location or by search. The app displays hourly and daily weather for 7 days.",
     "tags": ["React", "Sass", "Figma", "API"],
     "githubLink": "https://github.com/BLOCKYe/Pocket-weather",
-    "websiteLink": "https://pocket-weather.online/",
     "date": "August 2021",
     "category": "code",
     "id": 4,
-    "thumbnail": "images/code/weather1.png"
+    "thumbnail": "/images/code/weather1.png"
   },
 
-
-  {
-    "title": "Dashboard",
-    "desc": "Bank user dashboard design.",
-    "tags": ["UI", "Adobe XD", "Neumorphism", "Dashboard"],
-    "date": "2020",
-    "category": "design",
-    "id": 5,
-    "thumbnail": "images/design/dashboard.png"
-  },
   {
     "title": "Stragan",
     "desc": "Project of online store selling gaming peripherals. Work on the website in progress.",
@@ -64,7 +74,7 @@
     "date": "2021",
     "category": "design",
     "id": 6,
-    "thumbnail": "images/design/stragan1.png"
+    "thumbnail": "/images/design/stragan1.png"
   },
   {
     "title": "RadekKisiel",
@@ -74,16 +84,7 @@
     "date": "2020",
     "category": "design",
     "id": 7,
-    "thumbnail": "images/design/radek1.png"
-  },
-  {
-    "title": "Record concept",
-    "desc": "The idea behind the album cover.",
-    "tags": ["UI", "Adobe XD", "Ecommerce"],
-    "date": "2018",
-    "category": "design",
-    "id": 8,
-    "thumbnail": "images/design/untitled.png"
+    "thumbnail": "/images/design/radek1.png"
   },
 
   {
@@ -93,7 +94,7 @@
     "date": "2019",
     "category": "sandbox",
     "id": 9,
-    "thumbnail": "images/sandbox/eye1.jpg",
+    "thumbnail": "/images/sandbox/eye1.jpg",
     "images": ["images/sandbox/eye1.jpg", "images/sandbox/eye2.jpg"]
   },
   {
@@ -103,7 +104,7 @@
     "date": "2019",
     "category": "sandbox",
     "id": 10,
-    "thumbnail": "images/sandbox/340.jpg",
+    "thumbnail": "/images/sandbox/340.jpg",
     "images": ["images/sandbox/340.jpg", "images/sandbox/3402.jpg"]
   },
   {
@@ -113,7 +114,7 @@
     "date": "2021",
     "category": "sandbox",
     "id": 11,
-    "thumbnail": "images/sandbox/earth1.jpg",
+    "thumbnail": "/images/sandbox/earth1.jpg",
     "images": ["images/sandbox/earth1.jpg", "images/sandbox/earth2.jpg"]
   },
   {
@@ -123,7 +124,7 @@
     "date": "2019",
     "category": "sandbox",
     "id": 12,
-    "thumbnail": "images/sandbox/somewhere.png"
+    "thumbnail": "/images/sandbox/somewhere.png"
   },
   {
     "title": "untitled",
@@ -132,7 +133,7 @@
     "date": "2020",
     "category": "sandbox",
     "id": 13,
-    "thumbnail": "images/sandbox/darkside.jpg"
+    "thumbnail": "/images/sandbox/darkside.jpg"
   },
   {
     "title": "dummy",
@@ -141,7 +142,16 @@
     "date": "2020",
     "category": "sandbox",
     "id": 14,
-    "thumbnail": "images/sandbox/dummy.png"
+    "thumbnail": "/images/sandbox/dummy.png"
+  },
+  {
+    "title": "Dashboard",
+    "desc": "Bank user dashboard design.",
+    "tags": ["UI", "Adobe XD", "Neumorphism", "Dashboard"],
+    "date": "2020",
+    "category": "design",
+    "id": 5,
+    "thumbnail": "/images/design/dashboard.png"
   },
   {
     "title": "golden ratio",
@@ -150,7 +160,7 @@
     "date": "2021",
     "category": "sandbox",
     "id": 15,
-    "thumbnail": "images/sandbox/gold.jpg"
+    "thumbnail": "/images/sandbox/gold.jpg"
   },
   {
     "title": "untitled",
@@ -159,6 +169,6 @@
     "date": "2018",
     "category": "sandbox",
     "id": 16,
-    "thumbnail": "images/sandbox/heart.jpg"
+    "thumbnail": "/images/sandbox/heart.jpg"
   }
 ]
