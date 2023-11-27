@@ -4,44 +4,48 @@
  * User: @BLOCKYe
  * Date: 03.05.2022
  * Time: 11:30
-*/
+ */
 
-import React, {Component} from 'react';
-import ProjectCard, {IProjectCard} from "../ProjectCard/ProjectCard";
+import React, { Component } from 'react';
+import ProjectCard, { IProjectCard } from '../ProjectCard/ProjectCard';
 
-import projectsData from '../../../pages/api/data.json'
+interface IProjectProps {
+  data: IProjectCard[];
+  title: string;
+  subTitle: string;
+}
 
-class Projects extends Component {
-    render() {
-        return (
-            <div className={'animation-fade-3'}>
-                {/* <--- Previous projects ---> */}
-                <div className="text-xl md:text-2xl mt-20">
-                    Previous projects
-                </div>
+class Projects extends Component<IProjectProps> {
+  render() {
+    return (
+      <div className={'animation-fade-3'}>
+        {/* <--- Previous projects ---> */}
+        <h1 className='text-xl md:text-2xl mt-20'>{this.props.title}</h1>
 
-                <div className="mt-2 text-justWhite-dark text-md">
-                    A collection of my past realizations
-                </div>
+        <h3 className='mt-2 text-justWhite-dark text-md'>
+          {this.props.subTitle}
+        </h3>
 
-
-                {/* <--- Projects container wrapper ---> */}
-                <div className="grid md:grid-cols-2 gap-10 md:gap-5 mt-5">
-                    <div className={'grid gap-10 md:gap-5'}>
-                        {[].slice.call(projectsData).slice(0, projectsData.length / 2).map((project: IProjectCard) =>
-                            <ProjectCard key={project.id} {...project} />
-                        )}
-                    </div>
-                    <div className={'grid gap-10 md:gap-5'}>
-                        {[].slice.call(projectsData).slice(projectsData.length / 2, projectsData.length).map((project: IProjectCard) =>
-                            <ProjectCard key={project.id} {...project} />
-                        )}
-                    </div>
-                </div>
-
-            </div>
-        );
-    }
+        {/* <--- Projects container wrapper ---> */}
+        <div className='grid md:grid-cols-2 gap-10 md:gap-5 mt-5'>
+          <div className={'grid gap-10 md:gap-5'}>
+            {this.props.data
+              .slice(0, this.props.data.length / 2)
+              .map((project: IProjectCard) => (
+                <ProjectCard key={project.id} {...project} />
+              ))}
+          </div>
+          <div className={'grid gap-10 md:gap-5'}>
+            {this.props.data
+              .slice(this.props.data.length / 2, this.props.data.length)
+              .map((project: IProjectCard) => (
+                <ProjectCard key={project.id} {...project} />
+              ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Projects;

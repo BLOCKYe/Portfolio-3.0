@@ -1706,9 +1706,9 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-win32-x64-msvc@12.1.5":
-  "integrity" "sha512-/SoXW1Ntpmpw3AXAzfDRaQidnd8kbZ2oSni8u5z0yw6t4RwJvmdZy1eOaAADRThWKV+2oU90++LSnXJIwBRWYQ=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.1.5.tgz"
+"@next/swc-darwin-arm64@12.1.5":
+  "integrity" "sha512-y8mhldb/WFZ6lFeowkGfi0cO/lBdiBqDk4T4LZLvCpoQp4Or/NzUN6P5NzBQZ5/b4oUHM/wQICEM+1wKA4qIVw=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-12.1.5.tgz"
   "version" "12.1.5"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -3013,6 +3013,11 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
+"fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
+
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
   "resolved" "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -3803,6 +3808,11 @@
   "integrity" "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   "version" "1.2.1"
+
+"prettier@^3.1.0":
+  "integrity" "sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw=="
+  "resolved" "https://registry.npmjs.org/prettier/-/prettier-3.1.0.tgz"
+  "version" "3.1.0"
 
 "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="

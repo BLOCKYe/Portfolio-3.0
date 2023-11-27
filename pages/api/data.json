@@ -1,16 +1,5 @@
 [
   {
-    "title": "Outlays Dam",
-    "desc": "An application used to manage your expenses.",
-    "tags": ["NextJS", "Typescript", "Prisma", "Redux", "ChakraUI", "TailwindCSS"],
-    "githubLink": "https://github.com/BLOCKYe/Outlays-dam",
-    "date": "September 2022",
-    "category": "code",
-    "id": 18,
-    "thumbnail": "/images/code/outlays-dam-1.jpg",
-    "images": ["/images/code/outlays-dam-1.jpg", "/images/code/outlays-dam-2.jpg", "/images/code/outlays-dam-3.jpg"]
-  },
-  {
     "title": "Cloudtank.pl",
     "desc": "A service dedicated to boosting gaming accounts. In addition, the site has a CMS that allows you to edit all the content.",
     "tags": ["NextJS", "ChakraUI", "Strapi", "Figma", "REST API"],
@@ -33,7 +22,11 @@
     "category": "code",
     "id": 17,
     "thumbnail": "/images/code/pocket-poll-2.jpg",
-    "images": ["/images/code/pocket-poll-1.jpg", "/images/code/pocket-poll-2.jpg", "/images/code/pocket-poll-3.jpg"]
+    "images": [
+      "/images/code/pocket-poll-1.jpg",
+      "/images/code/pocket-poll-2.jpg",
+      "/images/code/pocket-poll-3.jpg"
+    ]
   },
   {
     "title": "Memenator",

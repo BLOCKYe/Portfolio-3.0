@@ -1,0 +1,50 @@
+[
+  {
+    "title": "FPSCS.PL",
+    "desc": "The essential app for Faceit platform enthusiasts. Analyze real-time stats, explore player profiles, and track your progress effortlessly.",
+    "tags": [
+      "NextJS 14",
+      "Typescript",
+      "TailwindCSS",
+      "shadcn",
+      "docker",
+      "husky",
+      "react-testing-library",
+      "jest",
+      "tanstack-react-query"
+    ],
+    "githubLink": "https://github.com/BLOCKYe/faceit-pocket-stats",
+    "websiteLink": "https://www.fpscs.pl/",
+    "date": "November 2023",
+    "category": "code",
+    "id": 19,
+    "thumbnail": "/images/code/fpscs3.png",
+    "images": [
+      "/images/code/fpscs2.png",
+      "/images/code/fpscs1.png"
+    ]
+  },
+  {
+    "title": "Outlays Dam",
+    "desc": "A private budget management application. Allows you to track your expenses and income, helps you achieve savings goals.",
+    "tags": [
+      "NextJS",
+      "Typescript",
+      "Prisma",
+      "Redux",
+      "ChakraUI",
+      "TailwindCSS"
+    ],
+    "githubLink": "https://github.com/BLOCKYe/Outlays-dam",
+    "websiteLink": "https://outlays-dam.vercel.app/",
+    "date": "September 2022",
+    "category": "code",
+    "id": 18,
+    "thumbnail": "/images/code/outlays-dam-1.jpg",
+    "images": [
+      "/images/code/outlays_dam_preview3.png",
+      "/images/code/outlays_dam_preview1.png",
+      "/images/code/outlays_dam_preview2.png"
+    ]
+  }
+]
