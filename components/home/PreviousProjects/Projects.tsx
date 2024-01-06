@@ -20,9 +20,9 @@ class Projects extends Component<IProjectProps> {
     return (
       <div className={'animation-fade-3'}>
         {/* <--- Previous projects ---> */}
-        <h1 className='text-xl md:text-2xl mt-20'>{this.props.title}</h1>
+        <h1 className='text-md md:text-2xl mt-20'>{this.props.title}</h1>
 
-        <h3 className='mt-2 text-justWhite-dark text-md'>
+        <h3 className='mt-1 text-justWhite-dark text-sm'>
           {this.props.subTitle}
         </h3>
 

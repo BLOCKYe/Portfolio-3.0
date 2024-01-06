@@ -69,12 +69,12 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
 
           <div className='md:p-10 py-10'>
             <div className='flex items-center gap-3 justify-between flex-wrap'>
-              <h1 className='text-xl text-extra-color'>{this.props.title}</h1>
+              <h1 className='text-md text-extra-color'>{this.props.title}</h1>
 
               <p className='text-sm text-justWhite-dark'>{this.props.date}</p>
             </div>
 
-            <p className='text-sm md:text-md text-justWhite-dark mt-3'>
+            <p className='text-sm md:text-sm text-justWhite-dark mt-3'>
               {this.props.desc}
             </p>
 
@@ -102,7 +102,7 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
               )}
             </div>
 
-            <div className='flex gap-2 md:gap-3 mt-5 flex-wrap items-center'>
+            <div className='flex gap-1 md:gap-2 mt-5 flex-wrap items-center'>
               <div className={'text-sm bg-[#1F1F1F] text-extra-color p-1'}>
                 TAGS
               </div>
@@ -142,7 +142,7 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
               <ModalCloseButton />
 
               <div className='flex items-center gap-3 flex-wrap mt-5'>
-                <div className='text-xl text-extra-color'>
+                <div className='text-md text-extra-color'>
                   {this.props.title}
                 </div>
 
@@ -151,7 +151,7 @@ class ProjectCard extends Component<IProjectCard, IStateProjectCard> {
                 </div>
               </div>
 
-              <div className='text-sm md:text-md text-justWhite-dark mt-3'>
+              <div className='text-sm md:text-sm text-justWhite-dark mt-3'>
                 {this.props.desc}
               </div>
             </div>

@@ -15,6 +15,17 @@ interface ITopbar {
 }
 
 class Topbar extends Component<ITopbar, any> {
+  /**
+   *
+   * @param isSelected
+   * @private
+   */
+  private linkStyleFactory(isSelected: boolean): string {
+    if (isSelected) return 'text-extra-color text-sm';
+
+    return 'transition-all hover:text-justWhite-light cursor-pointer text-sm';
+  }
+
   render() {
     return (
       <div
@@ -23,30 +34,17 @@ class Topbar extends Component<ITopbar, any> {
         <div className='flex justify-end gap-5 md:gap-10 text-justWhite-dark flex-wrap'>
           <Link href={'/'} passHref>
             <div
-              className={
-                this.props.selected === 'home'
-                  ? 'text-extra-color'
-                  : 'transition-all hover:text-justWhite-light cursor-pointer'
-              }>
-              home
+              className={this.linkStyleFactory(this.props.selected === 'home')}>
+              Home
             </div>
           </Link>
-          <div
-            className={
-              this.props.selected === 'projects'
-                ? 'text-extra-color'
-                : 'transition-all hover:text-justWhite-light cursor-pointer'
-            }>
-            projects
-          </div>
+
           <Link href={'/contact'} passHref>
             <div
-              className={
+              className={this.linkStyleFactory(
                 this.props.selected === 'contact'
-                  ? 'text-extra-color'
-                  : 'transition-all hover:text-justWhite-light cursor-pointer'
-              }>
-              contact
+              )}>
+              Contact me
             </div>
           </Link>
         </div>

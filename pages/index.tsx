@@ -39,34 +39,59 @@ const Home: NextPage = () => {
           <Topbar selected={'home'} />
 
           {/* <--- Header ---> */}
-          <div className='text-3xl md:text-4xl mt-10 md:mt-20 animation-fade-1'>
-            Frontend Developer
-            <br />
-            UI Designer
+          <div className='text-3xl md:text-4xl mt-10 animation-fade-1'>
+            <span className={'text-justWhite-dark'}>Dominik</span>
+            <span className={'font-bold text-extra-color'}> Obłoza</span>
+            <p className={'text-sm text-justWhite-dark'}>Warsaw, Poland</p>
           </div>
 
-          <div className='mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2 text-justify md:text-left'>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            I'm <span className={'text-extra-color'}>Dominik Obłoza</span> -
-            Frontend Developer based in Warsaw, Poland. I specialize in
-            developing web services and websites using
-            <span className={'text-justWhite-light'}> React</span> and
-            <span className={'text-justWhite-light'}> NextJs</span> with
-            Typescript. I design
-            <span className={'text-justWhite-light'}> UI</span> and take care of
-            good
-            <span className={'text-justWhite-light'}> UX</span>. I am also
-            familiar with frameworks such as React Redux, TailwindCSS, Chakra
-            UI, Material UI and Sass. On a daily basis I use git, Gitlab /
-            Github, Figma, Adobe products and web services like Jira / Asana.
-            <br />
-            <br />
-            What <span className={'text-justWhite-light'}>
-              sets me apart
-            </span>{' '}
-            is my ambition, creativity and accuracy. I like solving problems and
-            looking for new solutions. I demonstrate commitment and a fresh
-            approach.
+          <div className='mt-10 animation-fade-2 text-justify md:text-left'>
+            <h3 className={'font-bold text-lg'}>Experience</h3>
+            <p className={'mt-1 text-sm mb-5'}>
+              I specialise in Web Developing and UI design, especially ERP & CRM
+              systems.
+            </p>
+
+            <h3
+              className={
+                'font-bold text-lg pt-5 border-t-justDark-light border-t-[1px]'
+              }>
+              About me
+            </h3>
+            <p className={'mt-1 text-sm text-justWhite-dark'}>
+              I am
+              <span className={'text-justWhite-light'}> Dominik Obłoza</span>, a
+              Frontend Developer with expertise in the development of web
+              services and applications utilizing{' '}
+              <span className={'text-justWhite-light'}>
+                React & NextJs & Typescript.
+              </span>{' '}
+              I am well-versed in frameworks such as{' '}
+              <span className={'text-justWhite-light'}>
+                {' '}
+                React Redux, TailwindCSS, MaterialUI, Jest, Cypress and Docker.{' '}
+              </span>{' '}
+              My proficiency extends to designing intuitive user interfaces.
+              <br />
+              <br />
+              In the course of my work, I regularly utilize version control
+              systems like git, collaborative platforms such as Gitlab and
+              Github, design tools like Figma, Adobe products, and project
+              management tools like Jira and Asana.
+              <br />
+              <br />
+              What distinguishes my professional approach are qualities such as{' '}
+              <span className={'text-justWhite-light'}>
+                ambition, creativity, and commitment.{' '}
+              </span>{' '}
+              I am adept at problem-solving and consistently seek innovative
+              solutions. My commitment and fresh perspective contribute to my
+              effectiveness in{' '}
+              <span className={'text-justWhite-light'}>
+                {' '}
+                delivering high-quality results.{' '}
+              </span>
+            </p>
           </div>
 
           {/* <--- Socials ---> */}
@@ -107,7 +132,7 @@ const Home: NextPage = () => {
           {/* <--- Previous projects board ---> */}
           <Projects
             title={'Previous projects'}
-            subTitle={'A collection of my past realizations'}
+            subTitle={'A collection of my past side projects'}
             data={projectsData}
           />
 

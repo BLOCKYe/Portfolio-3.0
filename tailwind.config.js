@@ -8,11 +8,11 @@ module.exports = {
       colors: {
         justDark: {
           black: '#111111',
-          light: '#242424',
+          light: '#1f1f1f',
         },
         justWhite: {
           light: '#EAEAEA',
-          dark: '#686868',
+          dark: '#969696',
         },
         extra: {
           color: '#FACF87',

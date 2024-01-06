@@ -57,7 +57,7 @@ const CloudTank: NextPage = () => {
             </div>
           </div>
 
-          <div className='mt-10 text-justWhite-dark text-md md:text-xl animation-fade-2 text-justify md:text-left'>
+          <div className='mt-10 text-justWhite-dark text-sm md:text-md animation-fade-2 text-justify md:text-left'>
             {projectsData[1].desc}
           </div>
 

@@ -168,10 +168,10 @@ export default class Contact extends React.Component<NextPage, IStateContact> {
 
             {/* <--- Header ---> */}
             <div className='text-3xl md:text-4xl text-justWhite-light animation-fade-1 mt-5'>
-              Send a message to me
+              Contact with me
             </div>
 
-            <div className='mt-10 w-full text-justWhite-dark text-md md:text-xl animation-fade-2 text-justify md:text-left'>
+            <div className='mt-10 w-full text-justWhite-dark text-sm md:text-md animation-fade-2 text-justify md:text-left'>
               You can contact me through this form. If you are interested in
               cooperation briefly describe your needs.
             </div>
